@@ -1,1 +1,79 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px 0 25px;
+  border: 2px solid black;
+  background-color: black;
+  width: 100vw;
+  height: 40px;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.magazine {
+  width: 80vw;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.magazine article {
+  border: 1px solid blue;
+  margin: 5px;
+  padding: 5px;
+  width: calc(80vw - 20px);
+}
+
+.topic {
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid blue;
+  padding: 10px;
+}
+
+.rating {
+  border-bottom: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.rev {
+  margin: 0 10px 0 10px;
+}
+
+.btn-up, .btn-down {
+  margin: 0px 10px 0px 10px;
+}
+
+.comment {
+  margin: 3px;
+  padding: 5px;
+}
+
+aside {
+  border-left: 2px solid blue;
+  height: calc(100vh - 45px);
+  width: 20vw;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Coffee</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,58 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+        <nav>
+          <div class='logo'>Coffee-N-Discussion</div>
+          <div class='profile'>User</div>
+        </nav>
+      </header>
+      <main>
+      <div class = 'magazine'>
+        <article>
+          <div class='topic'>Who First? Chicken or Egg? </div>
+          <div class='rating'>
+            <div class = 'rev up'>
+              <button class = 'btn-up'>Up</button>
+              <span class='review'>Up-Votes:</span>
+              <span class='up'>50</span>
+            </div>
+            <div class = 'rev down'>
+              <span class='review'>Down-Votes:</span>
+              <span class='up'>10</span>
+              <button class = 'btn-down'>Down</button>
+            </div>
+          </div>
+          <div class='comment'>Egg</div>
+          <div class='comment'>Chicken</div>
+        </article>
+        <article>
+          <div class='topic'>What is life? </div>
+          <div class='comment'></div>
+        </article>
+      </div>
+      <aside>
+        <span class='advice'>Sign in for active discussion</span>
+        <form class = 'signIn'>
+          <h3>Sign In</h3>
+          <label for='unameSI'>Username</label><br>
+          <input type='text' id='unameSI'><br>
+          <label for='pwdSI'>Password</label><br>
+          <input type='text' id='pwdSI'><br>
+          <input type='submit' id='sUp'>
+        </form>
+        <span class='toggle-signUp-In'>Don't have account yet? Sign up</span>
+        <form class = 'signUp'>
+          <h3>Sign Up</h3>
+          <label for='unameSU'>Username</label><br>
+          <input type='text' id='unameSU'><br>
+          <label for='pwdSU'>Password</label><br>
+          <input type='text' id='pwdSU'><br>
+          <label for='cpwdSU'>Confirm Password</label><br>
+          <input type='text' id='cpwdSU'><br>
+          <input type='submit' id='sUp'>
+        </form>
+      </aside>
+      </main>
     </body>
 </html>
