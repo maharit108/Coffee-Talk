@@ -21,30 +21,40 @@ nav {
 main {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .magazine {
-  width: 80vw;
+  width: 840px;
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
 }
 
 .magazine article {
   border: 1px solid blue;
-  margin: 5px;
+  margin: 20px 20px 0px 20px;
   padding: 5px;
-  width: calc(80vw - 20px);
+  width: 800px;
+}
+
+.author {
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid maroon;
+  padding: 3px;
+  display: inline-flex;
+  margin: 10px 10px 0px 10px;
 }
 
 .topic {
   font-size: 18px;
   font-weight: 500;
   border-bottom: 1px solid blue;
-  padding: 10px;
+  padding: 10px 80px 10px 80px;
+  word-wrap: break-word;
 }
 
 .rating {
@@ -52,7 +62,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
 }
 
 .rev {
@@ -68,16 +78,32 @@ main {
 }
 
 .comment {
-  margin: 3px;
-  padding: 5px;
+  margin: 0px 3px 3px 3px;
+  padding: 8px 5px 5px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-top: 1px solid black;
 }
 
-aside {
-  border-left: 2px solid blue;
-  height: calc(100vh - 45px);
-  width: 20vw;
-  box-sizing: content-box;
+.comauthor {
+  border: 1px solid black;
+  margin-right: 15px;
+  padding: 1px 3px 1px 3px;
+}
+
+.comcontent {
+  word-wrap: break-word;
+}
+
+
+.side {
+  border: 1px solid blue;
+  margin-top: 20px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-items:center;
+  justify-content: flex-start;
 }
