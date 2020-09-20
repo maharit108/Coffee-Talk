@@ -13,20 +13,29 @@
     </head>
     <body>
       <header>
-        <nav>
+        <nav id='nav'>
           <div class='logo'>Coffee-N-Discussion</div>
           <div class='profile'>User</div>
         </nav>
         <div class='menu'>
           <ul>
-            <li>Add Article</li>
-            <li>Show my Article</li>
+            <li id= 'addArt'>Add Article</li>
+            <li id= 'showMyArt'>Show my Article</li>
             <li id= 'chPwdBtn'>Change Password</li>
             <li id = 'signOut'>Sign Out</li>
           </ul>
         </div>
       </header>
       <main>
+        <div class='addArtArea'>
+            <p class='postMsg'></p>
+            <label>Your Article Here</label><br>
+            <textarea id='writeArt'></textarea><br>
+            <button id='postEditArt'>Post Edits</button>
+            <button id='postArt'>Post</button>
+            <button id='addCancel'>Cancel</button>
+            <button class='returnToMag'>Ok</button>
+        </div>
       <div class = 'magazine'> </div>
       <div class='side'>
         <div class='outside'>
@@ -66,6 +75,24 @@
             <input type='submit' value='Change Password'>
           </form>
           <span class='msgin'></span>
+
+          <button id='createCom'>Add Comment </button>
+          <div class='comAdd'>
+            <p class='comMsg'></p>
+            <label class='lab'>Your Comment Here</label><br>
+            <textarea id='writeCom'></textarea><br>
+            <button id='postCom'>Post</button>
+            <button id='editCom'>Update</button>
+            <button id='comCancel'>Cancel</button>
+            <button class='done'>Ok</button>
+          </div>
+          <button id='editArt'>Update/Modify </button>
+          <button id='deleteArticle'>Delete </button>
+          <div id='com-btn'>
+            <p id='comMsgBoard'></p>
+            <button id='delCom'>Delete</button>
+            <button id='editComOpen'>Edit</button>
+          </div>
         </div>
       </div>
       </main>

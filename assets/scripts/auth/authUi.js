@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./../store')
+const artEvents = require('./../articles/artEvents')
 
 const sUpSuc = function (response) {
   $('#signUp').add('.up').add('.in').hide()
@@ -14,9 +15,11 @@ const sUpFail = function (response) {
 }
 
 const sInSuc = function (response) {
+  store.email = response.user.email + ' '
   store.user = response.user
   $('.outside').add('.in').hide()
   $('.menu').add('.inside').show()
+  console.log(store.email, store.user)
 }
 
 const sInFail = function (response) {
@@ -36,6 +39,7 @@ const chPwdFail = function () {
 }
 
 const sOutSuc = function () {
+  artEvents.allArticles()
   $('.outside').show()
   $('.menu').add('.inside').add('#chPwd').hide()
   $('.msgin').text('')
