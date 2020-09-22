@@ -32,7 +32,7 @@ const artSuc = function (response) {
         <div class = 'rev'>
           <span class='voteshow downV'>${downV}</span>
           <div class = 'votes btn-down'>
-            <button class= 'btn-upImg'>&#128078</button>
+            <button class= 'btn-downImg'>&#128078</button>
           </div>
         </div>
       </div>
