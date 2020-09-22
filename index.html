@@ -12,6 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <!-- header:: nav bar and menu -->
       <header>
         <nav id='nav'>
           <div class='logo'>Coffee-N-Discussion</div>
@@ -26,19 +27,26 @@
           </ul>
         </div>
       </header>
+      <!-- Main body start -->
       <main>
+        <!-- Add article -->
         <div class='addArtArea'>
             <p class='postMsg'></p>
             <label>Your Article Here</label><br>
             <textarea id='writeArt'></textarea><br>
-            <button id='postEditArt'>Post Edits</button>
-            <button id='postArt'>Post</button>
-            <button id='addCancel'>Cancel</button>
-            <button class='returnToMag'>Ok</button>
+            <div class='artBtns'>
+              <button id='postEditArt'>Post Edits</button>
+              <button id='postArt'>Post</button>
+              <button id='addCancel'>Cancel</button>
+              <button class='returnToMag'>Close</button>
+            </div>
         </div>
+        <!-- articles display area -->
       <div class = 'magazine'> </div>
+      <!-- sidebar for auth and other functions -->
       <div class='side'>
         <div class='outside'>
+          <br>
           <span class='frontMsg'>Sign in for active discussion</span>
 
           <form class = 'signIn' id = 'signIn'>
@@ -47,7 +55,7 @@
             <input name='credentials[email]' type='text' id='unameSI'><br>
             <label for='pwdSI'>Password</label><br>
             <input name='credentials[password]' type='password' id='pwdSI'><br>
-            <input type='submit' value='Sign In'>
+            <input type='submit' class = 'authBtn' value='Sign In'>
           </form>
 
           <form class = 'signUp' id='signUp'>
@@ -58,15 +66,16 @@
             <input name='credentials[password]' type='password' id='pwdSU'><br>
             <label for='cpwdSU'>Confirm Password</label><br>
             <input name='credentials[password_confirmation]' type='password' id='cpwdSU'><br>
-            <input type='submit' value='Sign Up'>
+            <input type='submit' class = 'authBtn' value='Sign Up'>
           </form>
 
           <p class='msg'></p>
-          <span class='up'>Don't have account yet? Sign up</span>
-          <span class='in'>Already have an account. Sign in</span>
+          <span class='up'>No account? Sign up</span>
+          <span class='in'>Have account? Sign in</span>
         </div>
 
         <div class = 'inside'>
+
           <form class = 'chPwd' id='chPwd'>
             <label for='oldPwd'>Old Password</label><br>
             <input name='passwords[old]' type='password' id='oldPwd'><br>
@@ -76,23 +85,33 @@
           </form>
           <span class='msgin'></span>
 
-          <button id='createCom'>Add Comment </button>
+        <div class='commentDiv'>
+          <button class= 'comBtnCreate'>Add Comment </button>
           <div class='comAdd'>
             <p class='comMsg'></p>
             <label class='lab'>Your Comment Here</label><br>
             <textarea id='writeCom'></textarea><br>
-            <button id='postCom'>Post</button>
-            <button id='editCom'>Update</button>
-            <button id='comCancel'>Cancel</button>
-            <button class='done'>Ok</button>
+            <div class='btnComEdits'>
+            <button id='postCom'>Post</button><br>
+            <button id='editCom'>Update</button><br>
+            <button id='comCancel'>Cancel</button><br>
           </div>
-          <button id='editArt'>Update/Modify </button>
-          <button id='deleteArticle'>Delete </button>
-          <div id='com-btn'>
-            <p id='comMsgBoard'></p>
-            <button id='delCom'>Delete</button>
-            <button id='editComOpen'>Edit</button>
           </div>
+
+            <button class='done'>Close</button><br>
+
+            <div id='com-btn'>
+              <button class= 'comBtn' id='delCom'>Delete Comment</button><br>
+              <button class= 'comBtn' id='editComOpen'>Edit Comment</button><br>
+            </div>
+
+          </div>
+
+          <div class='bArt'>
+            <button id='editArt'>Edit My Article</button><br>
+            <button id='deleteArticle'>Delete My Article</button><br>
+          </div>
+
         </div>
       </div>
       </main>

@@ -19,7 +19,6 @@ const sInSuc = function (response) {
   store.user = response.user
   $('.outside').add('.in').hide()
   $('.menu').add('.inside').show()
-  console.log(store.email, store.user)
 }
 
 const sInFail = function (response) {
@@ -30,12 +29,14 @@ const sInFail = function (response) {
 const chPwdSuc = function () {
   $('#chPwd').hide()
   $('.msgin').show()
-  $('.msgin').text('Password Changed')
+  $('.msgin').text('Changed')
+  $('.msgin').hide(8000)
 }
 
 const chPwdFail = function () {
   $('.msgin').show()
   $('.msgin').text("Couldn't change Password. Try Again")
+  $('.msgin').hide(5000)
 }
 
 const sOutSuc = function () {
@@ -43,6 +44,7 @@ const sOutSuc = function () {
   $('.outside').show()
   $('.menu').add('.inside').add('#chPwd').hide()
   $('.msgin').text('')
+  store.email = undefined
 }
 
 const sOutFail = function () {

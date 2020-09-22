@@ -3,6 +3,7 @@
 body {
   margin: 0;
   width: 100vw;
+  background-color:#878A8C;
 }
 
 nav {
@@ -19,24 +20,74 @@ nav {
   color: white;
 }
 
-// .profile:hover .menu{
-//   display: block;
-// }
-//
+.logo:hover {
+  color: #007bff;
+}
+
+.profile {
+  height: 40px;
+  width: 150px;
+  text-align: right;
+  padding: 8px 0 8px 0;
+}
+
+.profile:hover {
+  color: #007bff;
+}
+
 .menu {
-  // background-color: black;
-  // color: white;
   position: fixed;
   top: 40px;
   border: 2px solid black;
   right: 0px;
-  // display: none;
+  background-color: #4c4c4c;
+  color: white;
+  border-bottom-left-radius: 10px;
+  z-index: 1;
+}
+
+ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px 20px 5px 20px;
+    border-top: 2px solid black;
+}
+
+.menu li:hover {
+background-color: grey;
 }
 
 main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.addArtArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.addArtArea textarea {
+  height: 400px;
+  width: 400px;
+}
+
+.addArtArea label {
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.addArtArea .postMsg {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 500px;
 }
 
 .magazine {
@@ -50,33 +101,55 @@ main {
 }
 
 .magazine article {
-  border: 1px solid blue;
+  border: 1px solid black;
   margin: 20px 20px 0px 20px;
   padding: 5px;
   width: 800px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #4c4c4c;
+  color: white;
 }
 
 .magazine article:hover {
-  border: 1px solid red;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.magazine article:hover .comauthor {
+  color: black;
+  background: #d9ecf2;
+  border: 1px solid black;
+  transition: 0.5s;
 }
 
 .magazine .comment:hover {
-  border: 1px solid firebrick;
+  border: 1px solid #0079D3;
   background-color: grey;
   color: white;
+  transition: 0.5s;
 }
 
 .author {
   font-size: 16px;
   font-weight: 500;
-  border: 1px solid maroon;
+  border: 1px solid black;
   padding: 3px;
   display: inline-flex;
   margin: 10px 10px 0px 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  background-color: firebrick;
 }
 
 .topic {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   border-bottom: 1px solid blue;
   padding: 10px 80px 10px 80px;
@@ -88,24 +161,26 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
+  background-color:#DAE0E6;
 }
 
 .rev {
-  margin: 0 10px 0 10px;
+  margin: 0 5px 0 5px;
+  color: black;
 }
 
 .btn-down {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 5px 0px 5px;
 }
 
 .btn-up {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 5px 0px 5px;
 }
 
 .comment {
-  margin: 0px 3px 3px 3px;
-  padding: 8px 5px 5px 5px;
+  margin: 0px 3px 0px 3px;
+  padding: 8px 5px 0px 5px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -114,22 +189,114 @@ main {
 }
 
 .comauthor {
-  border: 1px solid black;
+  border: 1px solid red;
+  color: pink;
   margin-right: 15px;
   padding: 1px 3px 1px 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .comcontent {
   word-wrap: break-word;
 }
 
-
 .side {
-  border: 1px solid blue;
   margin-top: 60px;
-  width: 250px;
+  width: 264px;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
+}
+
+.outside, .inside {
+  width: 264px;
+  border: 1px solid blue;
+  padding: 10px;
+  position: fixed;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+input[type=submit] {
+  border: 1px solid #007bff;
+  padding: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  background-color: #007bff;
+  margin: 1rem 0 0.5rem 0;
+}
+
+button {
+  border: 1px solid #007bff;
+  padding: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  background-color: #007bff;
+}
+
+.up, .in {
+  border-bottom: 1px #007bff;
+  color: #007bff;
+  font-size: 18px;
+  font-weight: 300px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.frontMsg, .msg {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500px;
+}
+
+h3 {
+  margin: 20px 0 20px 0;
+}
+
+.commentDiv {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.btnComEdits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btnComEdits button {
+  margin-right: 5px;
+}
+
+.comAdd textarea {
+  height: 300px;
+}
+
+.comBtn {
+  width: 148px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bArt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }

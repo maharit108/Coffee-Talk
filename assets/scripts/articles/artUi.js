@@ -66,12 +66,22 @@ const postEditArtSuc = function () {
 
 const postArtFail = function () {
   $('.postMsg').text("Couldn't Post at this time. Please try again later. ")
+  $('.returnToMag').show()
 }
 
 const delArtSuc = function () {
-  console.log('deleted')
+  $('#chPwd').hide()
+  allHideSide()
 }
 
+// declare function that hide all side buttons
+function allHideSide () {
+  $('.comBtnCreate').hide()
+  $('.comAdd').add('.comMsg').add('.lab').add('#writeCom').add('.btnComEdits').add('#postCom').add('#editCom').add('#comCancel').hide()
+  $('.done').hide()
+  $('#com-btn').add('#delCom').add('#editComOpen').hide()
+  $('.bArt').add('#editArt').add('#deleteArticle').hide()
+}
 module.exports = {
   artSuc, artFail, postArtSuc, postArtFail, delArtSuc, postEditArtSuc
 }

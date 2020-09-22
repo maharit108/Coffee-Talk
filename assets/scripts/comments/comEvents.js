@@ -4,6 +4,16 @@ const store = require('./../store.js')
 const comApi = require('./comApi')
 const comUi = require('./comUi')
 const artUi = require('./../articles/artUi')
+const artEvents = require('./../articles/artEvents')
+
+// declare function that hide all side buttons
+function allHideSide () {
+  $('.comBtnCreate').hide()
+  $('.comAdd').add('.comMsg').add('.lab').add('#writeCom').add('.btnComEdits').add('#postCom').add('#editCom').add('#comCancel').hide()
+  $('.done').hide()
+  $('#com-btn').add('#delCom').add('#editComOpen').hide()
+  $('.bArt').add('#editArt').add('#deleteArticle').hide()
+}
 
 const createComment = function () {
   const comData = {
@@ -15,12 +25,15 @@ const createComment = function () {
   }
   comApi.createComFunc(comData)
     .then(comUi.createComSuc)
+    .then(artEvents.allArticles)
     .catch(artUi.postArtFail)
 }
 
 const deleteComment = function () {
+  allHideSide()
   comApi.deleteComFunc()
     .then(comUi.delComSuc)
+    .then(artEvents.allArticles)
     .catch(comUi.delComFail)
 }
 
@@ -33,17 +46,20 @@ const editComment = function () {
   }
   comApi.editComFunc(comData)
     .then(comUi.editComSuc)
+    .then(artEvents.allArticles)
     .catch(artUi.postArtFail)
 }
 
 const combtnshow = function () {
+  $('#chPwd').hide()
+  allHideSide()
+  $('.comBtnCreate').show()
   console.log('Events', store.email, store.comAuth)
   if (store.email === store.comAuth) {
-    $('#delCom').add('#editComOpen').show()
-    $('#editArt').add('#deleteArticle').add('#createCom').hide()
+    $('#com-btn').add('#delCom').add('#editComOpen').show()
+    // $('#editArt').add('#deleteArticle').hide()
   } else {
-    $('#delCom').add('#editComOpen').hide()
-    $('#editArt').add('#deleteArticle').add('#createCom').hide()
+    $('#com-btn').add('#delCom').add('#editComOpen').hide()
   }
 }
 
