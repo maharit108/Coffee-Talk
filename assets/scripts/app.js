@@ -187,6 +187,7 @@ $(() => {
   $('#editCom').on('click', comEvents.editComment)
   // delete comment
   $('#delCom').on('click', comEvents.deleteComment)
+  // $('.btn-up').prepend('<img>', {class: 'btn-upImg', src='../../public/thumb-up-1426815_1280.png'})
 
   // declare function that hide all side buttons
   function allHideSide () {
