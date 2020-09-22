@@ -19,7 +19,7 @@ const artSuc = function (response) {
       <div class='topic'>${string} </div>
       <div class='rating'>
         <div class = 'rev'>
-          <div class = 'votes btn-up'><img class= 'btn-upImg' src="./../../public/thumb-up-1426815_1280.png"></div>`
+          <div class = 'votes btn-up'><img class= 'btn-upImg' src='../../public/thumb-up-1426815_1280.png'></div>`
 
     upV = data.upvote
     downV = data.downvote
@@ -27,7 +27,7 @@ const artSuc = function (response) {
         </div>
         <div class = 'rev'>
           <span class='voteshow downV'>${downV}</span>
-          <div class = 'votes btn-down'><img class= 'btn-downImg'src="./../../public/thumb-down-1426814_1280.png"></div>
+          <div class = 'votes btn-down'><img class= 'btn-downImg' src='../../public/thumb-down-1426814_1280.png'></div>
         </div>
       </div>
     `
