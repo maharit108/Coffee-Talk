@@ -48,7 +48,9 @@ const sOutSuc = function () {
 }
 
 const sOutFail = function () {
-  console.log('Error:: Sign Out')
+  $('.msgin').show()
+  $('.msgin').text('Operation Failed. Try Again')
+  $('.msgin').hide(5000)
 }
 
 module.exports = {

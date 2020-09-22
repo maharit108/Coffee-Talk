@@ -5,17 +5,14 @@ const authApi = require('./authApi')
 const authUi = require('./authUi')
 
 const sUpSubmit = function (event) {
-  console.log('eve 1')
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
   if (data.credentials.password !== data.credentials.password_confirmation) {
-    console.log('eve 2')
     $('.msg').text("Passwords don't Match")
     $('#signUp').trigger('reset')
   } else {
     $('#signUp').trigger('reset')
-    console.log('eve 3')
     authApi.sUpFunc(data)
       .then(authUi.sUpSuc)
       .catch(authUi.sUpFail)

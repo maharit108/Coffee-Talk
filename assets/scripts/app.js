@@ -109,14 +109,38 @@ $(() => {
     store.artAuth = $(arttopic[0]).text()
     artEvents.artbtnshow()
   })
-  $('.magazine').on('click', '.votes', (event) => {
+  // get no. of votes for the article
+  const noOfVote = function (eve) {
+    const revClass = $(eve).parent().parent().parent()[0]
+    const rev = $(revClass).children()
+    const upV = $(rev).children()[1]
+    store.up = Number($(upV).text())
+    const downV = $(rev).children()[2]
+    store.down = Number($(downV).text())
+  }
+  $('.magazine').on('click', '.btn-upImg', (event) => {
     event.stopPropagation()
-    const voteDiv = $(event.target).parent().parent().parent()[0]
+    const voteDiv = $(event.target).parent().parent().parent().parent()[0]
     store.artId = voteDiv.id
     const arttopic = $(voteDiv).children()
-    store.artCont = $(arttopic[1]).text()
-    store.artAuth = $(arttopic[0]).text()
-    artEvents.artbtnshow()
+    const review = $(arttopic).children()
+    store.artCont = $(review[1]).text()
+    store.artAuth = $(review[0]).text()
+    store.vote = 'up'
+    noOfVote(event.target)
+    artEvents.votePost()
+  })
+  $('.magazine').on('click', '.btn-downImg', (event) => {
+    event.stopPropagation()
+    const voteDiv = $(event.target).parent().parent().parent().parent()[0]
+    store.artId = voteDiv.id
+    const arttopic = $(voteDiv).children()
+    const review = $(arttopic).children()
+    store.artCont = $(review[1]).text()
+    store.artAuth = $(review[0]).text()
+    store.vote = 'down'
+    noOfVote(event.target)
+    artEvents.votePost()
   })
   $('.magazine').on('click', '.comment', (event) => {
     event.stopPropagation()

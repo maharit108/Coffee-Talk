@@ -43,7 +43,6 @@ const postEditArtFunc = function (updateArt) {
 }
 
 const delArtFunc = function (artId) {
-  console.log('events', store.artId, 'token', store.user.token)
   return $.ajax({
     url: config.apiUrl + '/article/' + store.artId,
     headers: {
@@ -53,6 +52,29 @@ const delArtFunc = function (artId) {
   })
 }
 
+const votePostFunc = function () {
+  if (store.vote === 'up') {
+    store.up = Number(store.up) + 1
+  } else if (store.vote === 'down') {
+    store.down = Number(store.down) + 1
+  } else {
+    console.log()
+  }
+  return $.ajax({
+    url: config.apiUrl + '/articleVote/' + store.artId,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'PATCH',
+    data: {
+      article: {
+        upvote: store.up,
+        downvote: store.down,
+        voter_name: store.email
+      }
+    }
+  })
+}
 module.exports = {
-  allArticlesFunc, artByAuthorFunc, postArtFunc, delArtFunc, postEditArtFunc
+  allArticlesFunc, artByAuthorFunc, postArtFunc, delArtFunc, postEditArtFunc, votePostFunc
 }

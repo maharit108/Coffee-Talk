@@ -54,7 +54,6 @@ const combtnshow = function () {
   $('#chPwd').hide()
   allHideSide()
   $('.comBtnCreate').show()
-  console.log('Events', store.email, store.comAuth)
   if (store.email === store.comAuth) {
     $('#com-btn').add('#delCom').add('#editComOpen').show()
     // $('#editArt').add('#deleteArticle').hide()

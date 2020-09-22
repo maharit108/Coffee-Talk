@@ -4,7 +4,6 @@ const config = require('./../config.js')
 const store = require('./../store.js')
 
 const sUpFunc = function (data) {
-  console.log('api')
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -32,7 +31,6 @@ const chPwdFunc = function (data) {
 }
 
 const sOutFunc = function () {
-  console.log('AuthApi', store.user.token)
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',

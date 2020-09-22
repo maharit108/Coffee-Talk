@@ -76,8 +76,6 @@ const artbtnshow = function () {
   $('#chPwd').hide()
   allHideSide()
   $('.comBtnCreate').show()
-  console.log('artEvents', store.email, store.artAuth + ' ')
-  console.log('artEvents', store.email.length, (store.artAuth + ' ').length)
   if (store.email === store.artAuth + ' ') {
     $('.bArt').add('#editArt').add('#deleteArticle').show()
   } else {
@@ -85,6 +83,17 @@ const artbtnshow = function () {
   }
 }
 
+const votePost = function () {
+  if (store.voteName[store.artId].includes(store.email)) {
+    console.log()
+  } else {
+    artApi.votePostFunc()
+      .then(artUi.votePostUi)
+      .then(allArticles)
+      .catch(artUi.votePostUi)
+  }
+}
+
 module.exports = {
-  artByAuthor, allArticles, addArtClick, postMyArt, delArt, editArtClick, postEditArticle, artbtnshow
+  artByAuthor, allArticles, addArtClick, postMyArt, delArt, editArtClick, postEditArticle, artbtnshow, votePost
 }
