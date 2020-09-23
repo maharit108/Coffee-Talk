@@ -4,9 +4,10 @@ const store = require('./../store')
 const artEvents = require('./../articles/artEvents')
 
 const sUpSuc = function (response) {
-  $('#signUp').add('.up').add('.in').hide()
+  $('#signUp').add('.in').hide()
   $('#signIn').show()
   $('.msg').text("You're ready!!! Sign In Now")
+  $('.up').show()
 }
 
 const sUpFail = function (response) {
