@@ -83,6 +83,7 @@ $(() => {
     artEvents.artbtnshow()
   })
   $('.magazine').on('click', '.rating, .author, .topic', (event) => {
+    // prevent event propagation
     event.stopPropagation()
     const artDiv = $(event.target).parent()[0]
     store.artId = artDiv.id
