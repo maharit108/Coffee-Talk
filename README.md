@@ -5,6 +5,8 @@ This is an application built to create a platform where a user can read and inte
 ## Links
 **Deployed Application :** <https://maharit108.github.io/Coffee-Talk/>
 
+**Deployed API :** <https://guarded-sea-52498.herokuapp.com> + </URI_from_documenation>
+
 **API documentation :** <https://github.com/maharit108/Coffee-Talk-API>
 
 
