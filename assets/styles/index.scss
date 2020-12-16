@@ -29,7 +29,12 @@ nav {
   color: #007bff;
 }
 
-.profile {
+.nav__right {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile, .media_signIn {
   height: 40px;
   width: 150px;
   text-align: right;
@@ -310,7 +315,8 @@ h3 {
   align-items: center;
 }
 
-@media (max-width: 1155px) {
+@media screen and (max-width: 930px) {
+
   main {
     display: flex;
     flex-direction: column-reverse;
@@ -325,12 +331,15 @@ h3 {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    top: 20px;
+    margin-top: 160px;
   }
 
   .side {
-    width: 800px;
-    margin-bottom: 0px;
+    margin-top: 50px;
+  }
+
+  .outside {
+    display: none;
   }
 
   .bArt, .mediaComBtn {

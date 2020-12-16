@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="./public/cafe-151346_1280.png">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -16,7 +16,10 @@
       <header>
         <nav id='nav'>
           <div class='logo'><img src='./public/cafe-151346_1280.png'>Coffee Talks</div>
-          <div class='profile'>User</div>
+          <div class='nav__right'>
+            <div class='media_signIn'>Sign In</div>
+            <div class='profile'>User</div>
+          </div>
         </nav>
         <div class='menu'>
           <ul>
@@ -52,21 +55,31 @@
 
           <form class = 'signIn' id = 'signIn'>
             <h3>Sign In</h3>
+            <div>
             <label for='unameSI'>Username</label><br>
             <input name='credentials[email]' type='text' id='unameSI'><br>
+            </div>
+            <div>
             <label for='pwdSI'>Password</label><br>
             <input name='credentials[password]' type='password' id='pwdSI'><br>
+            </div>
             <input type='submit' class = 'authBtn' value='Sign In'>
           </form>
 
           <form class = 'signUp' id='signUp'>
             <h3>Sign Up</h3>
-            <label for='unameSU'>Username</label><br>
-            <input name='credentials[email]' type='text' id='unameSU'><br>
-            <label for='pwdSU'>Password</label><br>
-            <input name='credentials[password]' type='password' id='pwdSU'><br>
-            <label for='cpwdSU'>Confirm Password</label><br>
-            <input name='credentials[password_confirmation]' type='password' id='cpwdSU'><br>
+            <div>
+              <label for='unameSU'>Username</label><br>
+              <input name='credentials[email]' type='text' id='unameSU'><br>
+            </div>
+            <div>
+              <label for='pwdSU'>Password</label><br>
+              <input name='credentials[password]' type='password' id='pwdSU'><br>
+            </div>
+            <div>
+              <label for='cpwdSU'>Confirm Password</label><br>
+              <input name='credentials[password_confirmation]' type='password' id='cpwdSU'><br>
+            </div>
             <input type='submit' class = 'authBtn' value='Sign Up'>
           </form>
 

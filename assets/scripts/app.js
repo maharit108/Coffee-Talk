@@ -198,4 +198,11 @@ $(() => {
     $('#com-btn').add('#delCom').add('#editComOpen').hide()
     $('.bArt').add('#editArt').add('#deleteArticle').hide()
   }
+
+  $('.profile').hide()
+  if (window.innerWidth < 931) {
+    $('.media_signIn').on('click', () => {
+      $('.outside').toggle()
+    })
+  }
 })

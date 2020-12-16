@@ -18,8 +18,8 @@ const sUpFail = function (response) {
 const sInSuc = function (response) {
   store.email = response.user.email + ' '
   store.user = response.user
-  $('.outside').add('.in').hide()
-  $('.menu').add('.inside').show()
+  $('.outside').add('.in').add('.media_signIn').hide()
+  $('.menu').add('.inside').add('.profile').show()
 }
 
 const sInFail = function (response) {
@@ -42,8 +42,11 @@ const chPwdFail = function () {
 
 const sOutSuc = function () {
   artEvents.allArticles()
-  $('.outside').show()
-  $('.menu').add('.inside').add('#chPwd').hide()
+  if (window.innerWidth > 930) {
+    $('.outside').show()
+  }
+  $('.media_signIn').show()
+  $('.menu').add('.inside').add('#chPwd').add('.profile').hide()
   $('.msgin').text('')
   store.email = undefined
 }
