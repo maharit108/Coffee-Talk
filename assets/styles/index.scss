@@ -12,17 +12,24 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px 0 25px;
-  border: 2px solid black;
-  background-color: #290001;
+  padding: 20px 25px 0 25px;
+  border: none;
+  background-color: #dbcbbd;
   width: 100vw;
-  height: 40px;
-  color: white;
+  height: 130px;
+  color: black;
   z-index: 1;
 }
 
 .logo img {
   margin-right: 15px;
+  border-radius: 15px;
+  width: 80px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .logo:hover {
@@ -36,24 +43,30 @@ nav {
 
 .profile, .media_signIn {
   height: 40px;
-  width: 150px;
-  text-align: right;
-  padding: 8px 0 8px 0;
+  width: 110px;
+  text-align: center;
+  align-self: center;
+  padding: 0 8px 8px 8px;
+  font-size: 25px;
+  border: 2px solid black;
+  border-radius: 20px;
 }
 
-.profile:hover {
+.profile:hover, .media_signIn:hover {
   color: #007bff;
+  background-color: #290001;
 }
 
 .menu {
   position: fixed;
-  top: 40px;
-  border: 2px solid black;
+  top: 96px;
   right: 0px;
   background-color: #290001;
   color: white;
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
   z-index: 1;
+  border-top: 1px solid #dbcbbd;
 }
 
 ul {
@@ -63,8 +76,9 @@ ul {
 
 li {
     list-style-type: none;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 50px 10px 50px;
     border-top: 2px solid black;
+    font-size: 20px;
 }
 
 .menu li:hover {
@@ -101,7 +115,7 @@ main {
 }
 
 .magazine {
-  margin-top: 40px;
+  margin-top: 130px;
   width: 840px;
   box-sizing: content-box;
   display: flex;
@@ -217,7 +231,7 @@ main {
 }
 
 .side {
-  margin-top: 60px;
+  margin-top: 150px;
   width: 264px;
   display: flex;
   flex-direction: column;
@@ -236,27 +250,19 @@ main {
   border-top-right-radius: 10px;
 }
 
-input[type=submit] {
-  border: 1px solid #007bff;
-  padding: 3px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+input[type=submit], button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   color: white;
   background-color: #007bff;
   margin: 1rem 0 0.5rem 0;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-button {
-  border: 1px solid #007bff;
-  padding: 3px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-  color: white;
-  background-color: #007bff;
+input[type=submit]:hover, button:hover {
+  transform: scale(1.1);
 }
 
 .up, .in {
@@ -334,17 +340,10 @@ h3 {
   }
 
   .side {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 
   .outside {
     display: none;
-  }
-
-  .bArt, .mediaComBtn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 5px;
   }
 }
