@@ -200,9 +200,7 @@ $(() => {
   }
 
   $('.profile').hide()
-  if (window.innerWidth < 931) {
-    $('.media_signIn').on('click', () => {
-      $('.outside').toggle()
-    })
-  }
+  $('.media_signIn').on('click', () => {
+    $('.outside').toggle()
+  })
 })
