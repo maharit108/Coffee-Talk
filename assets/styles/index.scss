@@ -115,10 +115,9 @@ main {
   margin: 20px 20px 0px 20px;
   padding: 5px;
   width: 800px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: #290001;
-  color: white;
+  border-radius: 20px;
+  background-color: rgba(232, 236, 241, 1);
+  color: black;
 }
 
 .magazine article:hover {
@@ -204,7 +203,7 @@ main {
   width: 90px;
   overflow: scroll;
   border: 1px solid red;
-  color: pink;
+  color: black;
   margin-right: 15px;
   padding: 1px 3px 1px 3px;
   border-top-left-radius: 5px;
