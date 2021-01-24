@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Coffee</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="./public/cafe-151346_1280.png">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <!-- header:: nav bar and menu -->
+      <header>
+        <nav class='navWrapper'>
+          <nav id='nav'>
+            <div class='logo'><img src='./public/cafe-151346_1280.png'>Coffee Talks</div>
+            <div class='nav__right'>
+              <div class='media_signIn'>Sign In</div>
+              <div class='profile'>User
+                <div class='menu'>
+                  <ul>
+                    <li id= 'addArt'>Add Article</li>
+                    <li id= 'showMyArt'>Show my Article</li>
+                    <li id= 'chPwdBtn'>Change Password</li>
+                    <li id = 'signOut'>Sign Out</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </nav>
+      </header>
+      <!-- Main body start -->
+
+      <main>
+        <!-- Add article -->
+        <div class='addArtArea'>
+            <p class='postMsg'></p>
+            <label>Your Article Here</label><br>
+            <textarea id='writeArt'></textarea><br>
+            <div class='artBtns'>
+              <button id='postEditArt'>Post Edits</button>
+              <button id='postArt'>Post</button>
+              <button id='addCancel'>Cancel</button>
+              <button class='returnToMag'>Close</button>
+            </div>
+        </div>
+        <!-- articles display area -->
+      <div class = 'magazine'>
+        <div class='loading_wrapper'>
+          <div class='loader'></div>
+        </div> 
+      </div>
+      <!-- sidebar for auth and other functions -->
+      <div class='side'>
+        <div class='outside'>
+          <br>
+          <span class='frontMsg'>Sign in to add, like and comment articles !!!</span>
+
+          <form class = 'signIn' id = 'signIn'>
+            <h3>Sign In</h3>
+            <div>
+            <label for='unameSI'>Username</label><br>
+            <input name='credentials[email]' type='text' id='unameSI'><br>
+            </div>
+            <div>
+            <label for='pwdSI'>Password</label><br>
+            <input name='credentials[password]' type='password' id='pwdSI'><br>
+            </div>
+            <input type='submit' class = 'authBtn' value='Sign In'>
+          </form>
+
+          <form class = 'signUp' id='signUp'>
+            <h3>Sign Up</h3>
+            <div>
+              <label for='unameSU'>Username</label><br>
+              <input name='credentials[email]' type='text' id='unameSU'><br>
+            </div>
+            <div>
+              <label for='pwdSU'>Password</label><br>
+              <input name='credentials[password]' type='password' id='pwdSU'><br>
+            </div>
+            <div>
+              <label for='cpwdSU'>Confirm Password</label><br>
+              <input name='credentials[password_confirmation]' type='password' id='cpwdSU'><br>
+            </div>
+            <input type='submit' class = 'authBtn' value='Sign Up'>
+          </form>
+
+          <p class='msg'></p>
+          <span class='up'>No account? Sign up</span>
+          <span class='in'>Have account? Sign in</span>
+        </div>
+
+        <div class = 'inside'>
+
+          <form class = 'chPwd' id='chPwd'>
+            <label for='oldPwd'>Old Password</label><br>
+            <input name='passwords[old]' type='password' id='oldPwd'><br>
+            <label for='newPwd'>New Password</label><br>
+            <input name='passwords[new]' type='password' id='newPwd'><br>
+            <input type='submit' value='Change Password'>
+          </form>
+          <span class='msgin'></span>
+
+        <div class='commentDiv'>
+          <button class= 'comBtnCreate'>Add Comment </button>
+          <div class='comAdd'>
+            <p class='comMsg'></p>
+            <label class='lab'>Your Comment Here</label><br>
+            <textarea id='writeCom'></textarea><br>
+            <div class='btnComEdits'>
+            <button id='postCom'>Post</button><br>
+            <button id='editCom'>Update</button><br>
+            <button id='comCancel'>Cancel</button>
+          </div>
+          </div>
+
+            <button class='done'>Close</button><br>
+
+            <div id='com-btn' class='mediaCombtn'>
+              <button class= 'comBtn' id='editComOpen'>Edit Comment</button><br>
+              <button class= 'comBtn' id='delCom'>Delete</button><br>
+            </div>
+
+          </div>
+
+          <div class='bArt'>
+            <button id='editArt'>Edit My Article</button><br>
+            <button id='deleteArticle'>Delete My Article</button><br>
+          </div>
+
+        </div>
+      </div>
+      </main>
+    </body>
+</html>
