@@ -14,21 +14,24 @@
     <body>
       <!-- header:: nav bar and menu -->
       <header>
-        <nav id='nav'>
-          <div class='logo'><img src='./public/cafe-151346_1280.png'>Coffee Talks</div>
-          <div class='nav__right'>
-            <div class='media_signIn'>Sign In</div>
-            <div class='profile'>User</div>
-          </div>
+        <nav class='navWrapper'>
+          <nav id='nav'>
+            <div class='logo'><img src='./public/cafe-151346_1280.png'>Coffee Talks</div>
+            <div class='nav__right'>
+              <div class='media_signIn'>Sign In</div>
+              <div class='profile'>User
+                <div class='menu'>
+                  <ul>
+                    <li id= 'addArt'>Add Article</li>
+                    <li id= 'showMyArt'>Show my Article</li>
+                    <li id= 'chPwdBtn'>Change Password</li>
+                    <li id = 'signOut'>Sign Out</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
         </nav>
-        <div class='menu'>
-          <ul>
-            <li id= 'addArt'>Add Article</li>
-            <li id= 'showMyArt'>Show my Article</li>
-            <li id= 'chPwdBtn'>Change Password</li>
-            <li id = 'signOut'>Sign Out</li>
-          </ul>
-        </div>
       </header>
       <!-- Main body start -->
 
@@ -55,7 +58,7 @@
       <div class='side'>
         <div class='outside'>
           <br>
-          <span class='frontMsg'>Sign in for active discussion</span>
+          <span class='frontMsg'>Sign in to add, like and comment articles !!!</span>
 
           <form class = 'signIn' id = 'signIn'>
             <h3>Sign In</h3>

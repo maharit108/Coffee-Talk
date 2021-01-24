@@ -6,6 +6,14 @@ body {
   background-color:#dbcbbd;
 }
 
+.navWrapper {
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 nav {
   position: fixed;
   display: flex;
@@ -16,6 +24,7 @@ nav {
   border: none;
   background-color: #dbcbbd;
   width: 100vw;
+  max-width: 1250px;
   height: 130px;
   color: black;
   z-index: 1;
@@ -50,6 +59,7 @@ nav {
   font-size: 25px;
   border: 2px solid black;
   border-radius: 20px;
+  position: relative;
 }
 
 .profile:hover, .media_signIn:hover {
@@ -58,15 +68,14 @@ nav {
 }
 
 .menu {
-  position: fixed;
-  top: 96px;
+  position: absolute;
+  top: 40px;
   right: 0px;
   background-color: #290001;
   color: white;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px;
   z-index: 1;
-  border-top: 1px solid #dbcbbd;
+  width: 200px;
 }
 
 ul {
@@ -76,9 +85,13 @@ ul {
 
 li {
     list-style-type: none;
-    padding: 10px 50px 10px 50px;
-    border-top: 2px solid black;
+    padding: 10px 10px;
     font-size: 20px;
+    border-bottom: 2px solid gray;
+}
+
+li:last-child {
+  border-bottom: none;
 }
 
 .menu li:hover {
@@ -180,25 +193,19 @@ main {
 }
 
 .author {
-  max-width: 90px;
-  width: 90px;
-  overflow: scroll;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   border: 1px solid black;
-  padding: 3px;
+  padding: 3px 10px 3px 10px;
   display: inline-flex;
-  margin: 10px 10px 0px 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  margin: 10px;
+  border-radius: 5px;
   color: white;
   background-color: firebrick;
 }
 
 .topic {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   border-bottom: 1px solid blue;
   padding: 10px 80px 10px 80px;
@@ -238,17 +245,11 @@ main {
 }
 
 .comauthor {
-  max-width: 90px;
-  width: 90px;
-  overflow: scroll;
   border: 1px solid red;
   color: black;
   margin-right: 15px;
-  padding: 1px 3px 1px 3px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
 }
 
 .comcontent {
@@ -260,19 +261,18 @@ main {
   width: 264px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .outside, .inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 264px;
   border: 1px solid blue;
   padding: 10px;
   position: fixed;
   background-color:#DAE0E6;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
 input[type=submit], button {
@@ -288,6 +288,16 @@ input[type=submit], button {
 
 input[type=submit]:hover, button:hover {
   transform: scale(1.1);
+}
+
+input[type=password], input[type=text] {
+  width: 240px;
+  height: 40px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .up, .in {
